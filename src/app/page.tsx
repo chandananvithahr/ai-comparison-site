@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getFeaturedComparisons, getPopularTools } from '@/lib/tools'
 import ToolCard from '@/components/ToolCard'
 import AffiliateButton from '@/components/AffiliateButton'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: 'Find the Best AI Video Tool | AI Tool Compare',
@@ -232,6 +233,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
 
       {/* Newsletter / CTA Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

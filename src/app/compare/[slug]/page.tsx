@@ -75,6 +75,13 @@ export default function ComparePageRoute({ params }: PageProps) {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Affiliate Disclosure */}
+      <div className="bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 mb-8 text-sm text-gray-600">
+        <strong className="font-semibold text-gray-700">Affiliate disclosure:</strong>{' '}
+        This page contains affiliate links. We may earn a commission if you purchase
+        through our links — at no extra cost to you.
+      </div>
+
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
         <a href="/" className="hover:text-blue-600">

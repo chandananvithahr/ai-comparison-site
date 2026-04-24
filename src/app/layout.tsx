@@ -22,11 +22,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aitoolcompare.com',
+    url: 'https://aitoolvs.com',
     siteName: 'AI Tool Compare',
     title: 'AI Video Tool Comparison | Find the Best AI Video Tool',
     description:
       'Compare the best AI video tools side-by-side. Expert reviews, pricing comparisons, and unbiased recommendations.',
+    images: [
+      {
+        url: 'https://aitoolvs.com/og.svg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Tool Compare — Find the Best AI Video Tool',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

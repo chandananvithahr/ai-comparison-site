@@ -6,6 +6,21 @@ interface AffiliateButtonProps {
   className?: string
 }
 
+function buildAffiliateUrl(url: string, toolName: string): string {
+  if (!url || url === '#') return url
+
+  try {
+    const parsed = new URL(url)
+    const campaign = toolName.toLowerCase().replace(/\s+/g, '-')
+    parsed.searchParams.set('utm_source', 'aitoolvs')
+    parsed.searchParams.set('utm_medium', 'affiliate')
+    parsed.searchParams.set('utm_campaign', campaign)
+    return parsed.toString()
+  } catch {
+    return url
+  }
+}
+
 export default function AffiliateButton({
   url,
   toolName,
@@ -29,9 +44,11 @@ export default function AffiliateButton({
     lg: 'text-base px-6 py-3',
   }
 
+  const trackedUrl = buildAffiliateUrl(url, toolName)
+
   return (
     <a
-      href={url}
+      href={trackedUrl}
       target="_blank"
       rel="noopener noreferrer nofollow"
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
